@@ -1,0 +1,14 @@
+<mat-card style="margin: 20px">
+  <img matCardImage [src]="img"
+       style="background-color:#dedbdc">
+  <mat-card-content class="col-md-12">
+    <div style="margin: 5px;" align="center">
+      {{text}}
+    </div>
+  </mat-card-content>
+  <mat-card-footer>
+    <mat-card-actions align="center">
+      <button mat-raised-button color="primary" (click)="goToRoute()">{{doctorName}} Page</button>
+    </mat-card-actions>
+  </mat-card-footer>
+</mat-card>
