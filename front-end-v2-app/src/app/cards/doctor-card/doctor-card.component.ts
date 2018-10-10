@@ -13,6 +13,7 @@ export class DoctorCardComponent implements OnInit {
   @Input() text: string;
   @Input() id: string;
   @Input() doctorName: string;
+  @Input() address: string;
 
 
   constructor(private  router: Router, private drProf: DoctorProfileInfoService) {

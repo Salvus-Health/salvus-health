@@ -8,8 +8,9 @@ import {DoctorProfileTemplateComponent} from './doctor-profile-template/doctor-p
 
 
 const appRoutes: Routes = [
-  {path: '', component: InitialPageComponent},
-  {path: 'options', component: OptionsSectionComponent},
+  // {path: 'a', component: InitialPageComponent},
+  // {path: 'options', component: OptionsSectionComponent},
+  {path: '', component: OptionsSectionComponent},
   {path: 'login', component: LoginComponent},
   {path: 'doctor-profile/:id', component: DoctorProfileTemplateComponent},
 ];

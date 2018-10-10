@@ -9,10 +9,16 @@ import {MatMenuTrigger} from '@angular/material';
 export class AppComponent {
   title = 'front-end-v2-app';
 
+  // searchBarWidth = 'col-md-5';
+
   @ViewChild(MatMenuTrigger) trigger: MatMenuTrigger;
 
   someMethod() {
     this.trigger.openMenu();
   }
+
+  // getSearchBarWidth() {
+  //   this.searchBarWidth = 'col-md-10';
+  // }
 
 }

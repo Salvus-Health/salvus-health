@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Doctor} from '../doctor-profile-template/Doctor';
+import {DoctorProfileInfoService} from '../doctor-profile-template/doctor-profile-info.service';
 
 @Component({
   selector: 'abe-options-section',
@@ -8,13 +9,19 @@ import {Doctor} from '../doctor-profile-template/Doctor';
 })
 export class OptionsSectionComponent implements OnInit {
   drs: Doctor [] = [
-    new Doctor('myImg', 'Lionel Messi', 'Best doctor in the world', 'Barcelona', 'I098A'),
-    new Doctor('myImg', 'Cristiano Ronaldo', 'Second best doctor in the world', 'Juventus', 'D098B'),
-    new Doctor('myImg', 'Doctor House', 'This guy guesses whenever he needs to make a diagnostic', 'New YOrk', '00000'),
-    new Doctor('myImg', 'Whut whut', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', 'New YOrk', '00000')
+    new Doctor('../../assets/doc_pic.jpeg', 'Lionel Messi', 'Best doctor in the world', 'Barcelona', 'I098A'),
+    new Doctor('../../assets/doc_pic_2.jpg', 'Cristiano Ronaldo', 'Second best doctor in the world', 'Juventus', 'D098B'),
+    new Doctor('../../assets/doc_pic.jpeg', 'Doctor House', 'This guy guesses whenever he needs to make a diagnostic', 'New YOrk', '00000'),
+    new Doctor('../../assets/doc_pic.jpeg', 'Whut whut', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', 'New YOrk', '00000'),
+    new Doctor('../../assets/doc_pic.jpeg', 'Lionel Messi', 'Best doctor in the world', 'Barcelona', 'I098A'),
+    new Doctor('../../assets/doc_pic.jpeg', 'Cristiano Ronaldo', 'Second best doctor in the world', 'Juventus', 'D098B'),
+    new Doctor('../../assets/doc_pic.jpeg', 'Doctor House', 'This guy guesses whenever he needs to make a diagnostic', 'New YOrk', '00000'),
+    new Doctor('../../assets/doc_pic.jpeg', 'Whut whut', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', 'New YOrk', '00000')
   ];
 
-  constructor() {
+  constructor(private drService: DoctorProfileInfoService) {
+    //TODO: change this
+    this.findClosest(8);
   }
 
   ngOnInit() {
@@ -22,7 +29,9 @@ export class OptionsSectionComponent implements OnInit {
 
 
   public findClosest(zipcode: number) {
-
+    //Todo: Api call, zipcode sorting
+    //TODO: zipcode subscription
+    this.drService.storeAllDoctors(this.drs);
   }
 
 

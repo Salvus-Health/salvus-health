@@ -1,3 +1,8 @@
-<p>
-  options-section works!
-</p>
+<div class="row">
+  <abe-doctor-card class="col-md-3"
+                   *ngFor="let dr of drs"
+                   [img]="dr.img" [text]="dr.desc"
+                   [doctorName]="dr.drName"
+                   [address]="dr.address"
+                   [id]="dr.id"></abe-doctor-card>
+</div>

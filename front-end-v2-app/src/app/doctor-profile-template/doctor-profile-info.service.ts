@@ -12,8 +12,8 @@ export class DoctorProfileInfoService {
   }
 
   public getDocInfo(id: string): Doctor {
-     const doc: Doctor = this.drsInfo.find((d: Doctor) => d.id === id);
-     return doc;
+    const doc: Doctor = this.drsInfo.find((d: Doctor) => d.id === id);
+    return doc;
   }
 
   public storeAllDoctors(drs: Doctor []) {
