@@ -12,6 +12,9 @@ export class Doctor {
     public drName: string,
     public desc: string,
     public address: string,
-    public id: string) {
+    public id: string,
+    public specifications: string[],
+    public practiceName: string) {
+
   }
 }

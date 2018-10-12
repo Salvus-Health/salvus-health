@@ -5,11 +5,11 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   MatButtonModule,
-  MatCardModule,
+  MatCardModule, MatDatepicker, MatDatepickerModule,
   MatIconModule,
   MatInputModule,
   MatMenu,
-  MatMenuModule,
+  MatMenuModule, MatNativeDateModule,
   MatRadioModule,
   MatToolbarModule
 } from '@angular/material';
@@ -20,6 +20,7 @@ import { LoginComponent } from './login/login.component';
 import { DoctorCardComponent } from './cards/doctor-card/doctor-card.component';
 import { DoctorProfileTemplateComponent } from './doctor-profile-template/doctor-profile-template.component';
 import {DoctorProfileInfoService} from './doctor-profile-template/doctor-profile-info.service';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import {DoctorProfileInfoService} from './doctor-profile-template/doctor-profile
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    NgbModule,
     MatRadioModule,
     MatMenuModule,
     MatIconModule,
@@ -40,6 +42,8 @@ import {DoctorProfileInfoService} from './doctor-profile-template/doctor-profile
     MatToolbarModule,
     MatInputModule,
     MatCardModule,
+    MatNativeDateModule,
+    MatDatepickerModule,
     AppRoutingModule,
   ],
   providers: [DoctorProfileInfoService],

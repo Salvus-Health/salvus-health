@@ -1,19 +1,82 @@
 <div class="row">
-  <img class="col-md-12" [src]="dr.img" style="padding: 0px;">
+  <img class="col-md-12" [src]="dr.img" style="padding: 0px; height: 500px">
 
-  <div class="col-md-10 offset-1">
+  <div class="col-md-10 offset-1 row">
 
 
-    <div class="col-md-7">
-      <p class="col-md-12">Clinic Name</p>
-      <p class="col-md-12">Name: {{dr.drName}}</p>
-      <p class="col-md-12">{{dr.desc}}</p>
-      <p class="col-md-12">{{dr.address}}</p>
+    <div class="col-md-7 col-xl-7 leftInfo">
+      <p class="nameLabel col-md-12">Clinic Name</p>
+      <p class="col-md-12 practiceName">{{dr.practiceName}}</p>
+      <p class="col-md-12 region">{{dr.drName}}</p>
+
+
+      <mat-card
+        style="margin-top:2em"
+        class="col-md-12"
+      >
+        <!--<p class="col-md-12">Name: {{dr.drName}}</p>-->
+        <p class="col-md-12">{{dr.desc}}</p>
+        <p class="col-md-12">{{dr.address}}</p>
+        <p> Hello hello helloHello hello helloHello hello helloHello hello hello</p>
+      </mat-card>
+
+      <mat-card
+        class="col-md-12 doctorQuote">
+        <mat-card-title>
+          <p>A word from the doctor</p>
+        </mat-card-title>
+        <p>{{dr.desc}}</p>
+      </mat-card>
+
+      <mat-card>
+        <mat-card-title>
+          <p>Services</p>
+        </mat-card-title>
+
+      </mat-card>
+
+      <div class="col-md-12" align="center">
+        <ngb-datepicker [class.mat-elevation-z2]="true" #dp (select)="onDateSelection($event)"
+                        [displayMonths]="2"
+                        [dayTemplate]="t"
+                        outsideDays="hidden">
+        </ngb-datepicker>
+
+        <ng-template class="col-md-12" #t let-date let-focused="focused">
+          <span class="custom-day col-md-12"
+                [class.focused]="focused"
+                [class.range]="isRange(date)"
+                [class.faded]="isHovered(date) || isInside(date)"
+                (mouseenter)="hoveredDate = date"
+                (mouseleave)="hoveredDate = null">{{ date.day }}
+            </span>
+        </ng-template>
+
+      </div>
     </div>
-    <div class="col-md-3">
-      Get your free
+
+    <div class="col-xl-3 col-md-3">
+
+      <mat-card class="col-md-12 rightInfo"><p>Rates</p>
+        <p>Calendar</p>
+        <p>Schedule free visit</p>
+        <p>Schedule button</p>
+
+        <mat-form-field>
+          <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <!--<mat-datepicker #picker></mat-datepicker>-->
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </mat-card>
+
+
     </div>
   </div>
 
+  <div class="col-md-12">
+    <pre>From: {{ fromDate | json }} </pre>
+    <pre>To: {{ toDate | json }} </pre>
+  </div>
 
 </div>
