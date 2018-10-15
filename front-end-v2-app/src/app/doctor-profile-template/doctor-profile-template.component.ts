@@ -13,7 +13,7 @@ export class DoctorProfileTemplateComponent implements OnInit {
 
   //Todo: assign id using the router
   hoveredDate: NgbDate;
-
+  selected = 'option1';
   fromDate: NgbDate;
   toDate: NgbDate;
 
@@ -29,7 +29,8 @@ export class DoctorProfileTemplateComponent implements OnInit {
     'tie hendrerit. Aliquam auctor mauris a augue interdum, a lobortis enim faucibus.' +
     ' Duis placerat posuere est ac lobortis. Curabitur et pharetra nunc. ',
     'Barcelona', 'I098A'
-    , null, 'L messi Practice');
+    , null, 'L messi Practice',
+    70);
 
   constructor(private drService: DoctorProfileInfoService,
               actRoute: ActivatedRoute,

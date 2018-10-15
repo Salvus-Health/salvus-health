@@ -21,10 +21,38 @@
   font-size: 20px;
   margin-bottom: 20px;
 }
-
+//--------------------------------------------------------
 .rightInfo{
   margin-top: 30px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 30px;
 }
+
+.money{
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.dateContainer{
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dateHeader{
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
 
 .doctorQuote{
   margin-bottom: 20px;

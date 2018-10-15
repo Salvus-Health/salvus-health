@@ -1,26 +1,27 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {AppComponent} from './app.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {
   MatButtonModule,
-  MatCardModule, MatDatepicker, MatDatepickerModule,
+  MatCardModule, MatDatepicker, MatDatepickerModule, MatDividerModule, MatFormFieldModule,
   MatIconModule,
-  MatInputModule,
+  MatInputModule, MatListModule,
   MatMenu,
   MatMenuModule, MatNativeDateModule,
-  MatRadioModule,
+  MatRadioModule, MatSelectModule,
   MatToolbarModule
 } from '@angular/material';
-import { AppRoutingModule } from './/app-routing.module';
-import { OptionsSectionComponent } from './options-section/options-section.component';
-import { InitialPageComponent } from './initial-page/initial-page.component';
-import { LoginComponent } from './login/login.component';
-import { DoctorCardComponent } from './cards/doctor-card/doctor-card.component';
-import { DoctorProfileTemplateComponent } from './doctor-profile-template/doctor-profile-template.component';
+import {AppRoutingModule} from './/app-routing.module';
+import {OptionsSectionComponent} from './options-section/options-section.component';
+import {InitialPageComponent} from './initial-page/initial-page.component';
+import {LoginComponent} from './login/login.component';
+import {DoctorCardComponent} from './cards/doctor-card/doctor-card.component';
+import {DoctorProfileTemplateComponent} from './doctor-profile-template/doctor-profile-template.component';
 import {DoctorProfileInfoService} from './doctor-profile-template/doctor-profile-info.service';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { AddressComponent } from './address/address.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     InitialPageComponent,
     LoginComponent,
     DoctorCardComponent,
-    DoctorProfileTemplateComponent
+    DoctorProfileTemplateComponent,
+    AddressComponent
   ],
   imports: [
     BrowserModule,
@@ -44,9 +46,12 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     MatCardModule,
     MatNativeDateModule,
     MatDatepickerModule,
+    MatFormFieldModule,
+    MatSelectModule,
     AppRoutingModule,
   ],
   providers: [DoctorProfileInfoService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

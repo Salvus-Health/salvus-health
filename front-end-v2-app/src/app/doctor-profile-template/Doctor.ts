@@ -14,7 +14,10 @@ export class Doctor {
     public address: string,
     public id: string,
     public specifications: string[],
-    public practiceName: string) {
-
+    public practiceName: string,
+    private rates: number) {
+  }
+  getRates(): number {
+    return this.rates;
   }
 }
