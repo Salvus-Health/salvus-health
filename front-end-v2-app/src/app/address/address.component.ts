@@ -1,5 +1,5 @@
 import {Component, Input, OnInit, ViewChild} from '@angular/core';
-import {config} from '../../assets/config.js';
+// import {config} from '../../assets/config.js';
 import {} from '@types/googlemaps';
 import Point = google.maps.Point;
 import {PointAddress} from './PointAddress';
@@ -15,7 +15,7 @@ export class AddressComponent implements OnInit {
   @Input() markerTitle: string;
   map: google.maps.Map;
 
-  key = 'https://maps.googleapis.com/maps/api/js?key=' + config.Google_Maps_Key + '&callback=initMap';
+  // key = 'https://maps.googleapis.com/maps/api/js?key=' + config.Google_Maps_Key + '&callback=initMap';
 
 
   constructor() {
