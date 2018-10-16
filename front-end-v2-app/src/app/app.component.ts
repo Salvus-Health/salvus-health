@@ -1,5 +1,6 @@
 import {Component, ViewChild} from '@angular/core';
 import {MatMenuTrigger} from '@angular/material';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'abe-root',
@@ -13,8 +14,16 @@ export class AppComponent {
 
   @ViewChild(MatMenuTrigger) trigger: MatMenuTrigger;
 
+  constructor(private router: Router) {
+
+  }
+
   someMethod() {
     this.trigger.openMenu();
+  }
+
+  goToOptions() {
+      this.router.navigateByUrl('/');
   }
 
   // getSearchBarWidth() {

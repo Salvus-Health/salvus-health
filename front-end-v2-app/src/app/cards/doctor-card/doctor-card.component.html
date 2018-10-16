@@ -14,13 +14,14 @@
 <!--</mat-card>-->
 
 
-<mat-card
-  style="height: 350px;
-  margin-top: 50px"
+<mat-card class="cardMakeup"
   (click)="goToRoute()">
-  <img matCardImage="" [src]="img" >
+  <img matCardImage class="coverPicture" [src]="img" >
   <mat-card-content class="col-md-12">
-    <p>{{doctorName}}</p>
-    <p>{{text}}</p>
+    <p class="doctorName">{{doctorName}}</p>
+    <p class="practiceName">{{practiceName}}</p>
+    <p class="doctorRate" >${{rate}} per month</p>
+    <!--<p class="description">{{text}}</p>-->
+    <button mat-raised-button color="warn">Schedule Free visit</button>
   </mat-card-content>
 </mat-card>
