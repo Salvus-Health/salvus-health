@@ -1,52 +1,53 @@
 import {Component, OnInit} from '@angular/core';
 import {DoctorProfileInfoService} from './doctor-profile-info.service';
-import {Doctor} from './Doctor';
-import {ActivatedRoute} from '@angular/router';
+import {Doctor} from '../models/Doctor';
+import {ActivatedRoute, Router} from '@angular/router';
 import {NgbCalendar, NgbDate} from '@ng-bootstrap/ng-bootstrap';
+import {Authentication} from '../_services/Authentication';
+import {ClientRoutes} from '../routes/ClientRoutes';
 
 @Component({
   selector: 'abe-doctor-profile-template',
   templateUrl: './doctor-profile-template.component.html',
   styleUrls: ['./doctor-profile-template.component.scss']
 })
-export class DoctorProfileTemplateComponent implements OnInit {
+export class DoctorProfileTemplateComponent extends Authentication implements OnInit {
 
-  //Todo: assign id using the router
   hoveredDate: NgbDate;
   selected = 'option1';
   fromDate: NgbDate;
   toDate: NgbDate;
 
   id: string;
-  dr: Doctor = new Doctor('../../assets/doc_pic.jpeg',
-    'Lionel Messi',
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ex eros, posuere ' +
-    'ut erat id, consequat porta est.' +
-    ' Sed vel semper felis. ' +
-    'Etiam fermentum varius nunc. Aenean sit amet vehicula mauris, vel vestibulum massa. Curabitur vulputate erat blandit ' +
-    'est rhoncus sodales ac quis tellus. ' +
-    'Suspendisse dictum ante sed nulla moles' +
-    'tie hendrerit. Aliquam auctor mauris a augue interdum, a lobortis enim faucibus.' +
-    ' Duis placerat posuere est ac lobortis. Curabitur et pharetra nunc. ',
-    'Barcelona', 'I098A'
-    , null, 'L messi Practice',
-    70);
+  dr: Doctor = new Doctor();
 
   constructor(private drService: DoctorProfileInfoService,
               actRoute: ActivatedRoute,
-              calendar: NgbCalendar) {
+              calendar: NgbCalendar,
+              router: Router) {
+    super(router);
+
     this.fromDate = calendar.getToday();
     this.toDate = calendar.getNext(calendar.getToday(), 'd', 10);
+
     actRoute.params.subscribe(params => {
       this.id = params['id'];
-      // debugger;
       console.log(this.id + ' this is my id');
+      this.assignDoctorInfo();
     });
-    // this.dr = this.drService.getDocInfo(this.id)
-    // if (temp) {
-    //   this.dr = temp;
-    // }
-    // else
+  }
+
+  assignDoctorInfo() {
+    try {
+      const temp = this.drService.getDocInfo(this.id);
+      if (temp) {
+        this.dr = temp;
+      } else {
+        this.router.navigateByUrl(ClientRoutes.options);
+      }
+    } catch (e) {
+      this.router.navigateByUrl(ClientRoutes.options);
+    }
   }
 
   onDateSelection(date: NgbDate) {

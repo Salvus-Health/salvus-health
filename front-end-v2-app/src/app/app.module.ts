@@ -9,7 +9,7 @@ import {
   MatIconModule,
   MatInputModule, MatListModule,
   MatMenu,
-  MatMenuModule, MatNativeDateModule,
+  MatMenuModule, MatNativeDateModule, MatProgressSpinnerModule,
   MatRadioModule, MatSelectModule,
   MatToolbarModule
 } from '@angular/material';
@@ -21,7 +21,13 @@ import {DoctorCardComponent} from './cards/doctor-card/doctor-card.component';
 import {DoctorProfileTemplateComponent} from './doctor-profile-template/doctor-profile-template.component';
 import {DoctorProfileInfoService} from './doctor-profile-template/doctor-profile-info.service';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import { AddressComponent } from './address/address.component';
+import {AddressComponent} from './address/address.component';
+import {AboutPageComponent} from './about-page/about-page.component';
+import {ZipcodePageComponent} from './zipcode-page/zipcode-page.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {AuthenticationService} from './_services/authentication.service';
+import {HttpClientModule} from '@angular/common/http';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +37,10 @@ import { AddressComponent } from './address/address.component';
     LoginComponent,
     DoctorCardComponent,
     DoctorProfileTemplateComponent,
-    AddressComponent
+    AddressComponent,
+    AboutPageComponent,
+    ZipcodePageComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +57,11 @@ import { AddressComponent } from './address/address.component';
     MatDatepickerModule,
     MatFormFieldModule,
     MatSelectModule,
+    MatProgressSpinnerModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [DoctorProfileInfoService],
   bootstrap: [AppComponent]

@@ -1,10 +1,10 @@
 <div class="row" style="margin-top: 50px">
   <abe-doctor-card class="col-md-3 doctorCardMakeup"
                    *ngFor="let dr of drs"
-                   [img]="dr.img" [text]="dr.desc"
-                   [doctorName]="dr.drName"
+                   [img]="dr.imgUrl ||testImg" [text]="dr.description"
+                   [doctorName]="dr.headPhysician"
                    [address]="dr.address"
-                   [id]="dr.id"
-                   [rate]="dr.getRates()"
-                   [practiceName]="dr.practiceName"></abe-doctor-card>
+                   [id]="dr._id"
+                   [rate]="dr.visitFee"
+                   [practiceName]="dr.clinicName"></abe-doctor-card>
 </div>

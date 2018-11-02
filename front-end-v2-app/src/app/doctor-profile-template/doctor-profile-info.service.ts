@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Doctor} from './Doctor';
+import {Doctor} from '../models/Doctor';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +12,7 @@ export class DoctorProfileInfoService {
   }
 
   public getDocInfo(id: string): Doctor {
-    const doc: Doctor = this.drsInfo.find((d: Doctor) => d.id === id);
+    const doc: Doctor = this.drsInfo.find((d: Doctor) => d._id === id);
     return doc;
   }
 

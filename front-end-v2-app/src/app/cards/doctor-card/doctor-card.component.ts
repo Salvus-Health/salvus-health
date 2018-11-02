@@ -18,9 +18,8 @@ export class DoctorCardComponent implements OnInit {
   @Input() practiceName: string;
 
 
-
-
-  constructor(private  router: Router, private drProf: DoctorProfileInfoService) {
+  constructor(private  router: Router,
+              private drProf: DoctorProfileInfoService) {
   }
 
   goToRoute() {

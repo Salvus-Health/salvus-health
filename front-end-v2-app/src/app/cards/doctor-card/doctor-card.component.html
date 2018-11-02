@@ -1,19 +1,3 @@
-<!--<mat-card style="margin: 20px">-->
-  <!--<img matCardImage [src]="img"-->
-       <!--style="background-color:#dedbdc">-->
-  <!--<mat-card-content class="col-md-12">-->
-    <!--<div style="margin: 5px;" align="center">-->
-      <!--{{text}}-->
-    <!--</div>-->
-  <!--</mat-card-content>-->
-  <!--<mat-card-footer>-->
-    <!--<mat-card-actions align="center">-->
-      <!--<button mat-raised-button color="primary" (click)="goToRoute()">{{doctorName}} Page</button>-->
-    <!--</mat-card-actions>-->
-  <!--</mat-card-footer>-->
-<!--</mat-card>-->
-
-
 <mat-card class="cardMakeup"
   (click)="goToRoute()">
   <img matCardImage class="coverPicture" [src]="img" >
@@ -22,6 +6,6 @@
     <p class="practiceName">{{practiceName}}</p>
     <p class="doctorRate" >${{rate}} per month</p>
     <!--<p class="description">{{text}}</p>-->
-    <button mat-raised-button color="warn">Schedule Free visit</button>
+    <div class="butM"><button mat-raised-button color="warn">Schedule Free visit</button></div>
   </mat-card-content>
 </mat-card>

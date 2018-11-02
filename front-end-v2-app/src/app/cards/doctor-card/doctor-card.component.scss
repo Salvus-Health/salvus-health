@@ -6,6 +6,7 @@
   height: 350px;
   overflow:hidden;
   text-overflow: ellipsis;
+  cursor: pointer;
 }
 
 
@@ -28,4 +29,12 @@
 
 .description{
 
+}
+
+.butM{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

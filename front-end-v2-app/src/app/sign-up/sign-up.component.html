@@ -1,0 +1,58 @@
+<div class="sign-up">
+  <mat-card class="col-md-5" style="margin-top: 20px; margin-bottom: 20px">
+    <mat-card-title>Create your Salvus account</mat-card-title>
+    <mat-card-content>
+      <form [formGroup]="loginForm" class="row" (ngSubmit)="onSubmit()">
+        <div class="col-md-6">
+          <mat-form-field class="form-group col-md-12">
+            <input matInput type="text"
+                   formControlName="username" class="form-control"
+                   placeholder="Username/email"
+                   [ngClass]="{ 'is-invalid': submitted && f.username.errors }"/>
+          </mat-form-field>
+          <div *ngIf="submitted && f.username.errors" class="invalid-feedback warning-message">
+            <div *ngIf="f.username.errors.required">Username is required</div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <mat-form-field class="form-group col-md-12">
+            <input matInput type="text"
+                   formControlName="zipcode" class="form-group"
+                   placeholder="Zip Code">
+          </mat-form-field>
+          <div *ngIf="submitted && f.username.errors" class="invalid-feedback warning-message">
+            <div *ngIf="f.zipcode.errors.required">Zipcode is required</div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <mat-form-field class="form-group col-md-12">
+            <input matInput type="password"
+                   formControlName="password" class="form-control"
+                   placeholder="Password"
+                   [ngClass]="{ 'is-invalid': submitted && f.password.errors }"/>
+          </mat-form-field>
+          <div *ngIf="submitted && f.password.errors" class="invalid-feedback warning-message">
+            <div *ngIf="f.password.errors.required">Password is required</div>
+          </div>
+        </div>
+
+        <div class=" col-md-6">
+          <mat-form-field class="form-group col-md-12">
+            <input matInput type="password"
+                   formControlName="confirmPassword" class="form-control"
+                   placeholder="Confirm password"
+                   [ngClass]="{ 'is-invalid': submitted && f.confirmPassword.errors }"/>
+          </mat-form-field>
+        </div>
+
+        <div class="form-group col-md-12 butM">
+          <button mat-raised-button [disabled]="loading" color="primary" class="btn btn-primary">Register</button>
+          <img *ngIf="loading"
+               src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA=="/>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

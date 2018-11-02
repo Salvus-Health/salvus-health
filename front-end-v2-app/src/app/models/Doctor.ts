@@ -5,19 +5,51 @@
 |
 ---------------------------------------------------------------------------------------*/
 
+
 export class Doctor {
 
-  constructor(
-    public img: string,
-    public drName: string,
-    public desc: string,
-    public address: string,
-    public id: string,
-    public specifications: string[],
-    public practiceName: string,
-    private rates: number) {
+  description: string;
+
+  doctorWord: string;
+
+  services: number[];
+
+  address: number [];
+
+  scheduledVisits: Date [];
+
+  headPhysician: string;
+
+  price: number;
+
+  clinicName: string;
+
+  phoneNumber: number;
+
+  patientCap: number;
+
+  patientCount: number;
+
+  hours: string [];
+
+  registrationFee: number;
+
+  visitFee: number;
+
+  numberSalvusPatients: number;
+
+  functional: boolean;
+
+  tieredPay: boolean;
+
+  _id: string;
+
+  imgUrl: string;
+
+  constructor() {
   }
-  getRates(): number {
-    return this.rates;
-  }
+
+  // getRates(): number {
+  //   return this.rates;
+  // }
 }
