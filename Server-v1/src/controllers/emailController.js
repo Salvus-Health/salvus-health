@@ -1,7 +1,6 @@
 var mongoose = require('mongoose');
 var response = require('../helpers/response');
 var request = require('../helpers/request');
-var pagination = require('../helpers/pagination');
 
 const Email = mongoose.model('Email');
 
