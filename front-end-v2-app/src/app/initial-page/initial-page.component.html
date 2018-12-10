@@ -3,21 +3,9 @@
     <img src="./../../assets/logo.svg" style="height: 100px">
   </div>
 
-  <div class="col-md-12 picture-container image-info">
-    <!--<img class="col-md-12" style="padding: 0px" src="./../../assets/background.svg">-->
-    <div class="but-container col-8 col-md-5">
-      <button mat-raised-button
-              class="login-button col-md-3 col-1"
-              (click)="onLoginClick()">
-        Login
-      </button>
-      <button mat-raised-button
-              class="register-button col-md-3 col-1"
-              (click)="onRegisterClick()">
-        Register
-      </button>
-    </div>
-    <!--<p class="example"> hello from example</p>-->
+  <div class="col-md-12 col-12 picture-container image-info">
+    <router-outlet></router-outlet>
+      <!--<abe-initial-options class="col-12 col-md-12"></abe-initial-options>-->
   </div>
 
 

@@ -13,7 +13,7 @@ export abstract class Authentication {
 
   constructor(protected router: Router) {
     if (!AuthenticationService.hasToken()) {
-      this.router.navigateByUrl(ClientRoutes.login);
+      this.router.navigateByUrl(ClientRoutes.initialPage);
     }
   }
 }

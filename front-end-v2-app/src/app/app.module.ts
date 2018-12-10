@@ -31,6 +31,7 @@ import {SignUpComponent} from './sign-up/sign-up.component';
 import {BinaryQuestionCardComponent} from './cards/binary-question-card/binary-question-card.component';
 import {CustomerInfoInputComponent} from './customer-info-input/customer-info-input.component';
 import {trigger, state, style, animate, transition} from '@angular/animations';
+import { InitialOptionsComponent } from './initial-options/initial-options.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import {trigger, state, style, animate, transition} from '@angular/animations';
     ZipcodePageComponent,
     SignUpComponent,
     BinaryQuestionCardComponent,
-    CustomerInfoInputComponent
+    CustomerInfoInputComponent,
+    InitialOptionsComponent
   ],
   imports: [
     BrowserModule,

@@ -22,12 +22,5 @@ export class InitialPageComponent implements OnInit {
   }
 
 
-  onLoginClick() {
-    this.router.navigateByUrl(ClientRoutes.login);
-  }
-
-  onRegisterClick() {
-    this.router.navigateByUrl(ClientRoutes.customerInfoInput);
-  }
 
 }

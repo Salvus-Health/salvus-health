@@ -1,15 +1,37 @@
-.verticalAlign{
+.verticalAlign {
   display: flex;
   align-items: center;
   justify-content: center;
-  height:-webkit-fill-available;
+  height: -webkit-fill-available;
 }
-.separator{
+
+.separator {
   margin-bottom: 40px;
 }
 
-.center{
+.center {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.next-button {
+  display: flex;
+  justify-content: center;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .next-button {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .next-button {
+    display: flex;
+    justify-content: flex-end;
+  }
 }

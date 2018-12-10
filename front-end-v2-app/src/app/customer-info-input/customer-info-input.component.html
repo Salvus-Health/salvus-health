@@ -1,10 +1,10 @@
 <div class="verticalAlign">
-  <abe-binary-question-card *ngIf="empIHide" [question]="employerInsuranceQuestion"
+  <abe-binary-question-card class="col-10 col-md-6" *ngIf="empIHide" [question]="employerInsuranceQuestion"
                             (isPositive)="onIsEmpInsurance($event)">
   </abe-binary-question-card>
 
 
-  <mat-card *ngIf="additionalInfo" class="col-md-6">
+  <mat-card *ngIf="additionalInfo" class="col-md-6 col-10">
     <mat-card-title> We need some standard information to provide you the best options</mat-card-title>
     <mat-card-content>
 
@@ -39,7 +39,7 @@
       </section>
     </mat-card-content>
 
-    <mat-card-actions style=" display: flex; justify-content: flex-end">
+    <mat-card-actions class="next-button">
       <button mat-raised-button
               color="primary"
               (click)="onNextClick()"

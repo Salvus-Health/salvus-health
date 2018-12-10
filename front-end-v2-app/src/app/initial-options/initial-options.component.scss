@@ -1,15 +1,8 @@
-.verticalAlign {
-  display: flex;
+
+.center{
+  display:flex;
   align-items: center;
   justify-content: center;
-  height: 30vh;
-  padding: 0px;
-}
-
-.image-info {
-  background-image: url("./../../assets/background.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -17,14 +10,13 @@
   .example {
     background: red;
   }
-  .picture-container {
-    padding: 0px;
+  .center{
+    display:flex;
+    align-items: center;
+    justify-content: center;
     height: calc(100vh - 30vh - 56px);
-    overflow-y: hidden;
-    //display: flex;
-    //align-items: center;
-    //justify-content: center;
   }
+
 
   .but-container {
     display: flex;
@@ -32,6 +24,17 @@
     color: white;
     text-shadow: gray;
   }
+
+  .login-button {
+    background-color: #7cc6fc;
+    color: white
+  }
+
+  .register-button {
+    background-color: #7cc6fc;
+    color: white
+  }
+
 }
 
 //
@@ -42,11 +45,6 @@
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  .picture-container {
-    padding: 0px;
-    height: calc(100vh - 30vh - 64px);
-    overflow-y: hidden;
-  }
   .example {
     background: blue;
   }
@@ -54,11 +52,6 @@
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-  .picture-container {
-    padding: 0px;
-    height: calc(100vh - 30vh - 64px);
-    overflow-y: hidden;
-  }
   .example {
     background: orange;
   }
@@ -66,13 +59,30 @@
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-  .picture-container {
-    padding: 0px;
-    height: calc(100vh - 30vh - 64px);
-    overflow-y: hidden;
-    //display: flex;
-    //align-items: flex-start;
-    //justify-content: center;
+  .center{
+    display:flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: calc(100vh - 30vh - 56px);
+  }
+
+  .but-container {
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-shadow: gray;
+  }
+
+  .login-button {
+    background-color: #1599f9;
+    color: white;
+    margin: 20px;
+  }
+
+  .register-button {
+    background-color: #1599f9;
+    color: white;
+    margin: 20px;
   }
 
   .example {

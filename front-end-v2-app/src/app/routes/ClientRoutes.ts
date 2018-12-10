@@ -14,4 +14,5 @@ export const enum ClientRoutes {
   about = 'about',
   customerInfoInput = 'customer-info-input',
   initialPage = 'initial-page',
+  initialOptions = 'initial-options',
 }

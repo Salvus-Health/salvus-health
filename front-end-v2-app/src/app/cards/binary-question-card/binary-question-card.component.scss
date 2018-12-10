@@ -1,9 +1,36 @@
-.left-button{
+
+.but {
+  color:white;
+}
+
+.but-s{
   display: flex;
   justify-content: center;
   height: 100%;
 }
 
-.but {
-  color:white;
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .but-s{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .but-s{
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .but-s{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+  }
 }
