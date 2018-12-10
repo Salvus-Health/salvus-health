@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
+import {ClientRoutes} from '../routes/ClientRoutes';
+import {Authentication} from '../_services/Authentication';
+import {AuthenticationService} from '../_services/authentication.service';
 
 @Component({
   selector: 'abe-initial-page',
@@ -7,9 +11,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InitialPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router, authServ: AuthenticationService) {
+    if (AuthenticationService.hasToken()) {
+      this.router.navigateByUrl(ClientRoutes.options);
+    }
+
+  }
 
   ngOnInit() {
+  }
+
+
+  onLoginClick() {
+    this.router.navigateByUrl(ClientRoutes.login);
+  }
+
+  onRegisterClick() {
+    this.router.navigateByUrl(ClientRoutes.customerInfoInput);
   }
 
 }

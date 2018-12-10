@@ -1,9 +1,35 @@
-<div class="row">
-  <!--<div class="col-md-6" style="background-color: red" [class.mat-elevation-z2]="true">-->
-  <!--hello-->
-  <!--</div>-->
-  <!--<div class="col-md-6" style="background-color: blue" [class.mat-elevation-z2]="true">-->
-  <!--hello-->
-  <!--</div>-->
-  <img src="../assets/doc_pic.jpeg" class="col-md-12" style="padding: 0px; height: 100%;">
+<div class="row overall">
+  <div class="col-md-12 verticalAlign">
+    <img src="./../../assets/logo.svg" style="height: 100px">
+  </div>
+
+  <div class="col-md-12 picture-container image-info">
+    <!--<img class="col-md-12" style="padding: 0px" src="./../../assets/background.svg">-->
+    <div class="but-container col-8 col-md-5">
+      <button mat-raised-button
+              class="login-button col-md-3 col-1"
+              (click)="onLoginClick()">
+        Login
+      </button>
+      <button mat-raised-button
+              class="register-button col-md-3 col-1"
+              (click)="onRegisterClick()">
+        Register
+      </button>
+    </div>
+    <!--<p class="example"> hello from example</p>-->
+  </div>
+
+
 </div>
+
+
+<!--<div id="outer" class="row">-->
+<!--<div id="inner_fixed" class="col-12 verticalAlign">-->
+<!--<img src="./../../assets/logo.svg">-->
+<!--</div>-->
+
+<!--<div id="inner_remaining " class="col-12" style="padding:0px">-->
+<!--<img class="col-md-12" style="padding: 0px" src="./../../assets/background.svg">-->
+<!--</div>-->
+<!--</div>-->

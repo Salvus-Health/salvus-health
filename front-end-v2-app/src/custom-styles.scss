@@ -66,9 +66,11 @@ $custom-theme-warn: mat-palette($mat-red);
 $custom-theme: mat-light-theme($custom-theme-primary, $custom-theme-accent, $custom-theme-warn);
 $cust-t: mat-light-theme($custom-theme-primary, $custom-theme-accent, $custom-theme-warn);
 
-//@include angular-material-theme($custom-theme);
-@include mat-toolbar-theme($cust-t);
-@include mat-button-theme($cust-t);
-@include mat-card-theme($cust-t);
+@include angular-material-theme($custom-theme);
+//@include mat-toolbar-theme($cust-t);
+//@include mat-button-theme($cust-t);
+//@include mat-card-theme($cust-t);
+//@include mat-slide-toggle-theme($cust-t);
+
 
 

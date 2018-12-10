@@ -13,7 +13,7 @@ import {CustomerInfoInputComponent} from './customer-info-input/customer-info-in
 
 
 const appRoutes: Routes = [
-  // {path: 'a', component: InitialPageComponent},
+  {path: ClientRoutes.initialPage, component: InitialPageComponent},
   // {path: ClientRoutes.options, component: OptionsSectionComponent},
   {path: '', component: OptionsSectionComponent},
   {path: ClientRoutes.customerInfoInput, component: CustomerInfoInputComponent},

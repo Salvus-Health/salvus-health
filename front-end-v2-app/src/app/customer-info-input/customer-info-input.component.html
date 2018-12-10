@@ -10,7 +10,7 @@
 
       <section class="separator center col-md-12">
         <mat-slide-toggle
-          [color]="color"
+          color="primary"
           [checked]="checked"
           [disabled]="disabled"
           [labelPosition]="'before'">
@@ -40,7 +40,10 @@
     </mat-card-content>
 
     <mat-card-actions style=" display: flex; justify-content: flex-end">
-      <button mat-raised-button (click)="onNextClick()" > next </button>
+      <button mat-raised-button
+              color="primary"
+              (click)="onNextClick()"
+              style="color: white"> Next </button>
     </mat-card-actions>
   </mat-card>
 

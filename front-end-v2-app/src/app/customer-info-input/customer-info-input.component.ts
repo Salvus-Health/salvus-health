@@ -48,7 +48,7 @@ export class CustomerInfoInputComponent implements OnInit {
   }
 
   onNextClick() {
-    this.router.navigateByUrl(ClientRoutes.options);
+    this.router.navigateByUrl(ClientRoutes.signUp);
   }
 
 }

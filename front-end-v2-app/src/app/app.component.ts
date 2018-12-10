@@ -1,6 +1,7 @@
 import {Component, ViewChild} from '@angular/core';
 import {MatMenuTrigger} from '@angular/material';
 import {Router} from '@angular/router';
+import {ClientRoutes} from './routes/ClientRoutes';
 
 @Component({
   selector: 'abe-root',
@@ -15,7 +16,7 @@ export class AppComponent {
   @ViewChild(MatMenuTrigger) trigger: MatMenuTrigger;
 
   constructor(private router: Router) {
-
+      router.navigateByUrl(ClientRoutes.initialPage);
   }
 
   someMethod() {

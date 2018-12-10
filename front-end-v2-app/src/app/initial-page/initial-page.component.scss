@@ -1,0 +1,111 @@
+.verticalAlign {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30vh;
+  padding: 0px;
+}
+
+.image-info {
+  background-image: url("./../../assets/background.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .example {
+    background: red;
+  }
+  .picture-container {
+    padding: 0px;
+    height: calc(100vh - 30vh - 56px);
+    overflow-y: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .but-container {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    text-shadow: gray;
+  }
+
+  .login-button {
+    background-color: #7cc6fc;
+    color: white
+  }
+
+  .register-button {
+    background-color: #7cc6fc;
+    color: white
+  }
+
+}
+
+//
+///* Small devices (portrait tablets and large phones, 600px and up) */
+//@media only screen and (min-width: 600px) {
+//  .example {background: green;}
+//}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .picture-container {
+    padding: 0px;
+    height: calc(100vh - 30vh - 64px);
+    overflow-y: hidden;
+  }
+  .example {
+    background: blue;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .picture-container {
+    padding: 0px;
+    height: calc(100vh - 30vh - 64px);
+    overflow-y: hidden;
+  }
+  .example {
+    background: orange;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .picture-container {
+    padding: 0px;
+    height: calc(100vh - 30vh - 64px);
+    overflow-y: hidden;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .but-container {
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-shadow: gray;
+  }
+
+  .login-button {
+    background-color: #1599f9;
+    color: white;
+    margin: 20px;
+  }
+
+  .register-button {
+    background-color: #1599f9;
+    color: white;
+    margin: 20px;
+  }
+
+  .example {
+    background: pink;
+  }
+}
