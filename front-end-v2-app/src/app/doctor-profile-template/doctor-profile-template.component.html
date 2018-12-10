@@ -1,7 +1,7 @@
 <div class="row">
   <img class="col-md-12" [src]="dr.imgUrl" style="padding: 0px; height: 500px">
 
-  <div class="col-md-10 offset-1 row">
+  <div class="col-md-10 col-10 offset-1  row">
 
 
     <div class="col-md-7 col-xl-7 leftInfo">
@@ -36,7 +36,7 @@
         <abe-address></abe-address>
       </mat-card>
 
-      <div class="col-md-12" align="center">
+      <div class="col-md-12" align="center" *ngIf="false">
         <ngb-datepicker [class.mat-elevation-z2]="true" #dp (select)="onDateSelection($event)"
                         [displayMonths]="2"
                         [dayTemplate]="t"
@@ -58,7 +58,7 @@
 
     </div>
 
-    <div class="col-xl-4 col-md-4">
+    <div class="col-xl-4 col-md-4" style="margin-bottom: 30px">
       <mat-card class="col-md-12 rightInfo">
         <p><span class="money">$ {{dr.visitFee}}</span> per month</p>
         <hr>
@@ -89,7 +89,7 @@
 
 
         <div class="dateContainer">
-          <button mat-raised-button color="warn">
+          <button mat-raised-button color="primary" style="color: white;">
             Schedule free visit
           </button>
         </div>
@@ -99,9 +99,9 @@
     </div>
   </div>
 
-  <div class="col-md-12">
-    <pre>From: {{ fromDate | json }} </pre>
-    <pre>To: {{ toDate | json }} </pre>
-  </div>
+  <!--<div class="col-md-12">-->
+    <!--<pre>From: {{ fromDate | json }} </pre>-->
+    <!--<pre>To: {{ toDate | json }} </pre>-->
+  <!--</div>-->
 
 </div>

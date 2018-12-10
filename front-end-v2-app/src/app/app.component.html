@@ -1,17 +1,28 @@
 <div class="container-fluid ">
   <div class="row">
-    <mat-toolbar color="primary" class="col-md-12" [class.mat-elevation-z2]="true">
+    <mat-toolbar color="accent" class="col-md-12" [class.mat-elevation-z2]="true">
       <mat-toolbar-row>
-        <span class="col-md-2 iconM" (click)="goToOptions()">Icon</span>
+        <span class="col-md-2 col-4 ">
+          <img class="" (click)="goToOptions()" src="../assets/logo.svg">
+        </span>
 
-        <form class="col-md-5" [class.mat-elevation-z2]="true" style="padding: 0px">
-          <input id="topSearch" class="col-md-12"
-                 type="text"
-                 placeholder="Search"
-                 aria-label="Search"
-                 style="outline: none">
-        </form>
-        <button mat-button routerLink="about" class="col">More Info</button>
+        <!--<form class="col-md-5" [class.mat-elevation-z2]="true" style="padding: 0px">-->
+        <!--<input id="topSearch" class="col-md-12"-->
+        <!--type="text"-->
+        <!--placeholder="Search"-->
+        <!--aria-label="Search"-->
+        <!--style="outline: none">-->
+        <!--</form>-->
+        <div class="col-4 col-md-7">
+          <p class="comp-name"> Salvus Health </p>
+        </div>
+
+        <div class="col-4 col-md-3" style="display: flex; justify-content: flex-end">
+          <i class="material-icons" style="color: #1599f9;">
+            menu
+          </i>
+          <!--<button mat-button routerLink="about" >More Info</button>-->
+        </div>
       </mat-toolbar-row>
     </mat-toolbar>
   </div>

@@ -11,5 +11,6 @@ export const enum ClientRoutes {
   zipCodeNotFound = 'zipcode-not-found',
   signUp = 'sign-up',
   options = '/',
-  about = 'about'
+  about = 'about',
+  customerInfoInput = 'customer-info-input'
 }

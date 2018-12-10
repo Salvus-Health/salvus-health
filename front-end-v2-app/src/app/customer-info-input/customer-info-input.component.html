@@ -1,0 +1,48 @@
+<div class="verticalAlign">
+  <abe-binary-question-card *ngIf="empIHide" [question]="employerInsuranceQuestion"
+                            (isPositive)="onIsEmpInsurance($event)">
+  </abe-binary-question-card>
+
+
+  <mat-card *ngIf="additionalInfo" class="col-md-6">
+    <mat-card-title> We need some standard information to provide you the best options</mat-card-title>
+    <mat-card-content>
+
+      <section class="separator center col-md-12">
+        <mat-slide-toggle
+          [color]="color"
+          [checked]="checked"
+          [disabled]="disabled"
+          [labelPosition]="'before'">
+          Pre-existing condition
+        </mat-slide-toggle>
+      </section>
+
+      <section class="separator center col-md-12">
+        <mat-form-field>
+          <mat-select required>
+            <mat-option value="female">Female</mat-option>
+            <mat-option value="male">Male</mat-option>
+          </mat-select>
+          <mat-label> Sex</mat-label>
+        </mat-form-field>
+
+      </section>
+
+      <section class="separator center col-md-12">
+        <mat-form-field>
+          <input matInput [matDatepicker]="picker" placeholder="Date of birth">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+      </section>
+    </mat-card-content>
+
+    <mat-card-actions style=" display: flex; justify-content: flex-end">
+      <button mat-raised-button (click)="onNextClick()" > next </button>
+    </mat-card-actions>
+  </mat-card>
+
+
+</div>

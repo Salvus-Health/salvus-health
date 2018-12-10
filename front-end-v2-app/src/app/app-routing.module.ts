@@ -9,12 +9,14 @@ import {AboutPageComponent} from './about-page/about-page.component';
 import {ZipcodePageComponent} from './zipcode-page/zipcode-page.component';
 import {SignUpComponent} from './sign-up/sign-up.component';
 import {ClientRoutes} from './routes/ClientRoutes';
+import {CustomerInfoInputComponent} from './customer-info-input/customer-info-input.component';
 
 
 const appRoutes: Routes = [
   // {path: 'a', component: InitialPageComponent},
   // {path: ClientRoutes.options, component: OptionsSectionComponent},
   {path: '', component: OptionsSectionComponent},
+  {path: ClientRoutes.customerInfoInput, component: CustomerInfoInputComponent},
   {path: ClientRoutes.login, component: LoginComponent},
   {path: ClientRoutes.doctorProfile, component: DoctorProfileTemplateComponent},
   {path: ClientRoutes.about, component: AboutPageComponent},

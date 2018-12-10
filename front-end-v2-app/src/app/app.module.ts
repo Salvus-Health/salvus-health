@@ -10,7 +10,7 @@ import {
   MatInputModule, MatListModule,
   MatMenu,
   MatMenuModule, MatNativeDateModule, MatProgressSpinnerModule,
-  MatRadioModule, MatSelectModule,
+  MatRadioModule, MatSelectModule, MatSlideToggleModule,
   MatToolbarModule
 } from '@angular/material';
 import {AppRoutingModule} from './/app-routing.module';
@@ -27,7 +27,10 @@ import {ZipcodePageComponent} from './zipcode-page/zipcode-page.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {AuthenticationService} from './_services/authentication.service';
 import {HttpClientModule} from '@angular/common/http';
-import { SignUpComponent } from './sign-up/sign-up.component';
+import {SignUpComponent} from './sign-up/sign-up.component';
+import {BinaryQuestionCardComponent} from './cards/binary-question-card/binary-question-card.component';
+import {CustomerInfoInputComponent} from './customer-info-input/customer-info-input.component';
+import {trigger, state, style, animate, transition} from '@angular/animations';
 
 @NgModule({
   declarations: [
@@ -40,7 +43,9 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     AddressComponent,
     AboutPageComponent,
     ZipcodePageComponent,
-    SignUpComponent
+    SignUpComponent,
+    BinaryQuestionCardComponent,
+    CustomerInfoInputComponent
   ],
   imports: [
     BrowserModule,
@@ -61,7 +66,9 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatInputModule,
+    MatSlideToggleModule
   ],
   providers: [DoctorProfileInfoService],
   bootstrap: [AppComponent]

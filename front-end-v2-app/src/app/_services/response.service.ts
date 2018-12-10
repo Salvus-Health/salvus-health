@@ -15,7 +15,6 @@ export class ResponseService {
   }
 
   authenticate(router: Router) {
-    debugger;
     router.navigateByUrl(ClientRoutes.login);
   }
 
