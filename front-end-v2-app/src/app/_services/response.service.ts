@@ -15,7 +15,7 @@ export class ResponseService {
   }
 
   authenticate(router: Router) {
-    router.navigateByUrl(ClientRoutes.login);
+    router.navigateByUrl(ClientRoutes.initialPage);
   }
 
 }

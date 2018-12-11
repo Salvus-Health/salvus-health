@@ -12,6 +12,7 @@ import {ClientRoutes} from '../routes/ClientRoutes';
 export abstract class Authentication {
 
   constructor(protected router: Router) {
+    // debugger;
     if (!AuthenticationService.hasToken()) {
       this.router.navigateByUrl(ClientRoutes.initialPage);
     }

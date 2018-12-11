@@ -70,7 +70,7 @@ export class SignUpComponent implements OnInit {
           this.router.navigate([this.returnUrl]);
         },
         error => {
-          debugger;
+          // debugger;
           alert('Could not sign up');
           this.alertService.error(error);
           this.loading = false;

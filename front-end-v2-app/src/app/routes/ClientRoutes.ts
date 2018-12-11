@@ -10,7 +10,7 @@ export const enum ClientRoutes {
   doctorProfile = 'doctor-profile/:id',
   zipCodeNotFound = 'zipcode-not-found',
   signUp = 'sign-up',
-  options = '/',
+  options = 'options',
   about = 'about',
   customerInfoInput = 'customer-info-input',
   initialPage = 'initial-page',

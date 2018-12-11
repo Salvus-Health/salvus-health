@@ -42,6 +42,7 @@ export class OptionsSectionComponent extends Authentication implements OnInit {
               private http: HttpClient,
               private respS: ResponseService) {
     super(router);
+    // debugger;
     //TODO: change this
     this.findClosest(8);
   }

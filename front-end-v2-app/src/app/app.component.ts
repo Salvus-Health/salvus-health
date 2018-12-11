@@ -2,6 +2,7 @@ import {Component, ViewChild} from '@angular/core';
 import {MatMenuTrigger} from '@angular/material';
 import {Router} from '@angular/router';
 import {ClientRoutes} from './routes/ClientRoutes';
+import {AuthenticationService} from './_services/authentication.service';
 
 @Component({
   selector: 'abe-root',
@@ -16,7 +17,7 @@ export class AppComponent {
   @ViewChild(MatMenuTrigger) trigger: MatMenuTrigger;
 
   constructor(private router: Router) {
-      router.navigateByUrl(ClientRoutes.initialPage);
+    router.navigateByUrl(ClientRoutes.initialPage);
   }
 
   someMethod() {
@@ -24,7 +25,11 @@ export class AppComponent {
   }
 
   goToOptions() {
-      this.router.navigateByUrl('/');
+    if (!AuthenticationService.hasToken()) {
+      this.router.navigateByUrl(ClientRoutes.initialPage);
+    } else {
+      this.router.navigate(['/']);
+    }
   }
 
   // getSearchBarWidth() {
